@@ -1,11 +1,8 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 
-const NavBar = () => {
-  return (
-    <div>
-      <h2>NavBar</h2>
-    </div>
-  );
+const NavBar = ({ location }) => {
+  return <div>{location.pathname !== "/login" ? <h2>NavBar</h2> : null}</div>;
 };
 
-export default NavBar;
+export default withRouter(NavBar);
