@@ -10,11 +10,13 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    let {password}=credentials
     axiosInstance
       .post("/login", credentials)
       .then((res) => {
         const { token } = res.data;
         localStorage.setItem("token", token);
+        localStorage.setItem("district", password.split('-')[1]);
         history.push(`/dashboard`);
       })
       .catch((err) => {
