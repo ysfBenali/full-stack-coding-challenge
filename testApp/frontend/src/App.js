@@ -4,6 +4,9 @@ import Login from "./components/auth/Login";
 import NavBar from "./components/NavBar";
 import NotFound from "./pages/NotFound";
 import AllComplaints from "./components/AllComplaints";
+import TopComplaints from "./components/TopComplaints";
+import OpenComplaints from "./components/OpenComplaints";
+import ClosedComplaints from "./components/ClosedComplaints";
 import { QueryClient, QueryClientProvider } from "react-query";
 import "./App.css";
 
@@ -18,6 +21,9 @@ function App() {
           <Switch>
             <Route exact path="/" component={AllComplaints} />
             <Route path="/all" component={AllComplaints} />
+            <Route path="/top" component={TopComplaints} />
+            <Route path="/closed" component={ClosedComplaints} />
+            <Route path="/open" component={OpenComplaints} />
             <Route path="/login" component={Login} />
             <Route default component={NotFound} />
           </Switch>
