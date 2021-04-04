@@ -10,7 +10,7 @@ const NavBar = ({ location }) => {
         <>
           <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6 select-none">
             <div className="flex items-center flex-shrink-0 text-dark mr-8 py-3 tracking-wide">
-              <span className="font-semibold text-xl tracking-tight text-indigo-500">
+              <span className="font-semibold text-2xl tracking-tight text-indigo-500">
                 Dashboard
               </span>
             </div>
@@ -34,7 +34,7 @@ const NavBar = ({ location }) => {
                 isExpanded ? `block` : `hidden`
               } w-full block flex-grow lg:flex lg:items-center lg:w-auto`}
             >
-              <div className="text-sm lg:flex-grow">
+              <div className="text-md lg:flex-grow">
                 <NavLink
                   onClick={() => toggleExpansion(!isExpanded)}
                   className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 mr-8 py-3 uppercase border-b-2 hover:border-indigo-500 hover:text-indigo-500 tracking-wide cursor-pointer"
